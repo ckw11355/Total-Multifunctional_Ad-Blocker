@@ -1,0 +1,23 @@
+{
+    "name": "Ad Spectrum 2021 Christmas Edition",
+    "version": "1.2",
+    "description": "Youtube PowerBlocks by ~645~ ; Powered by Dev - 12/16/2021 LLC ; Welcome to VisualBlocks 1.2 (Visual Coder.265AV1!); PowerActionsBackgroundRunner.js is Running! Open README.txt to Custoize Your Own List of BlockSites Against Ads!",
+    "author": "Dev - 12/16/2021 LLC",
+    "permissions": ["webRequest", "webRequestBlocking", "http://*/", "https://*/", "<all_urls>", "tabs", "activeTab"],
+    "background":{
+        "scripts": ["PowerActions.js", "AdSensce_defaultFilters.js"]
+    },
+    "icons":{
+        "16":"icons/img27.jpg",
+        "48":"icons/img26.jpg",
+        "128": "icons/logo_img102.jpg",
+        "32":"icons/img25.jpg"
+    },
+    "manifest_version":2,
+
+    "content_scripts": [{
+        "js": ["Scripts_PowerRemover_YTAutoManeuver.js"],
+        "run_at": "document_idle",
+        "matches":["<all_urls>"]
+    }]
+}
