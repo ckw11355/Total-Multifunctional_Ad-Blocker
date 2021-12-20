@@ -1,0 +1,75 @@
+"background":{
+        "scripts": ["PowerActions.js","AdSensce.js", "nangadblock.js"]
+    },
+
+//chrome.webRequest.onBeforeRequest.addListener( \\Must be place LAST, VIRAIABLES & CONSTANT FIRST!!!\\
+
+
+TL;DR's:
+->Replaced
+function(details) {return {cancel:true}},
+    {urls:["*://*.zedo.com/*"]}
+    ["blocking"]
+    )
+
+With  
+function(details) {return {cancel:true}},
+    {urls:defaultFilters}
+    ["blocking"]
+    )
+
++(Added)
+defaultFilters = [
+	"*://*.doubleclick.net/*",
+	"*://partner.googleadservices.com/*",
+	"*://*.googlesyndication.com/*",
+	"*://*.google-analytics.com/*",
+	"*://creative.ak.fbcdn.net/*",
+	"*://*.adbrite.com/*",
+	"*://*.exponential.com/*",
+	"*://*.quantserve.com/*",
+	"*://*.scorecardresearch.com/*",
+	"*://*.zedo.com/*",
+]
+<_CREATE YOUR OWN LISTS->\\
+
+Optional Examples:
+	"https://youtu.be/sZSJPA2XBD4",
+    "https://youtu.be/OyJpSU2dDIE",
+    "https://i.ytimg.com/generate_204",
+	
+    "*://*.macy.com/*",
+    "*://*.macy's.com/*",
+    "*://*.at&t.com/*",
+    "*://*.statefarm.com/*",
+    "*://*.tmobile.com/*",
+    "*://*.macys.com/*",
+    "*://*.jcpenny's.com/*",
+    "*://*.t-mobile.com/*",
+    "*://*.tmobile.com/*",
+    "*://*.ka-cn.com/*",
+    "*://*.ka-cn.*/*",
+    "*://*.fi.google.com/*",
+    "*://*.fi-google.com/*",
+    "*://*.grammarly.*/*",
+    "*://*.kfc.*/*",
+    "*://*.mcdonalds.*/*",
+    "*://*.pepsi.*/*",
+    "*://*.google-fi.*/*",
+    "*://*.googlefi.*/*",
+    "*://*.kamikoto.*/*",
+    "*://*.popeyes.*/*",
+    "*://*.TacoBell.*/*",
+    "*://*.KFC.*/*",
+    "*://*.Chick-fil-A.*/*",
+    "*://*.BurgerKing.*/*",
+    "*://*.Domino's.*/*",
+    "*://*.Dominos.*/*",
+    "*://*.PizzaHut.*/*",
+    "*://*.Wendy's.*/*",
+    "*://*.Wendys.*/*",
+
+
+
+        "*://*.files.000/*", removed
+       -> Reason: Unchecked runtime.lastError: '*://*.files.000/*' is not a valid URL pattern.
